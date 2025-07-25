@@ -22,44 +22,48 @@ export function HeroSection() {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Subtle floating dots
-    const dots: Array<{x: number, y: number, vx: number, vy: number, size: number, opacity: number}> = [];
-    
-    for (let i = 0; i < 20; i++) {
-      dots.push({
-        x: Math.random() * canvas.offsetWidth,
-        y: Math.random() * canvas.offsetHeight,
-        vx: (Math.random() - 0.5) * 0.2,
-        vy: (Math.random() - 0.5) * 0.2,
-        size: Math.random() * 1.5 + 0.5,
-        opacity: Math.random() * 0.3 + 0.1
-      });
-    }
-
-    const animate = () => {
+    // Static abstract lines
+    const drawAbstractLines = () => {
       ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
       
-      // Update dots
-      dots.forEach(dot => {
-        dot.x += dot.vx;
-        dot.y += dot.vy;
+      const lines = [
+        // Diagonal lines
+        { x1: 0, y1: canvas.offsetHeight * 0.2, x2: canvas.offsetWidth * 0.3, y2: 0 },
+        { x1: canvas.offsetWidth * 0.7, y1: 0, x2: canvas.offsetWidth, y2: canvas.offsetHeight * 0.4 },
+        { x1: 0, y1: canvas.offsetHeight * 0.8, x2: canvas.offsetWidth * 0.4, y2: canvas.offsetHeight },
+        { x1: canvas.offsetWidth * 0.6, y1: canvas.offsetHeight, x2: canvas.offsetWidth, y2: canvas.offsetHeight * 0.6 },
         
-        if (dot.x < 0 || dot.x > canvas.offsetWidth) dot.vx *= -1;
-        if (dot.y < 0 || dot.y > canvas.offsetHeight) dot.vy *= -1;
+        // Curved abstract lines
+        { x1: canvas.offsetWidth * 0.1, y1: canvas.offsetHeight * 0.3, x2: canvas.offsetWidth * 0.9, y2: canvas.offsetHeight * 0.7 },
+        { x1: canvas.offsetWidth * 0.2, y1: canvas.offsetHeight * 0.9, x2: canvas.offsetWidth * 0.8, y2: canvas.offsetHeight * 0.1 },
         
-        ctx.beginPath();
-        ctx.arc(dot.x, dot.y, dot.size, 0, Math.PI * 2);
-        ctx.fillStyle = `hsl(214, 95%, 55%, ${dot.opacity})`;
-        ctx.fill();
-      });
+        // Horizontal accent lines
+        { x1: canvas.offsetWidth * 0.1, y1: canvas.offsetHeight * 0.5, x2: canvas.offsetWidth * 0.5, y2: canvas.offsetHeight * 0.5 },
+        { x1: canvas.offsetWidth * 0.6, y1: canvas.offsetHeight * 0.3, x2: canvas.offsetWidth * 0.9, y2: canvas.offsetHeight * 0.3 },
+      ];
       
-      requestAnimationFrame(animate);
+      lines.forEach((line, index) => {
+        ctx.beginPath();
+        ctx.moveTo(line.x1, line.y1);
+        ctx.lineTo(line.x2, line.y2);
+        ctx.strokeStyle = `hsl(214, 95%, 55%, ${0.15 + (index % 3) * 0.05})`;
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      });
     };
     
-    animate();
+    drawAbstractLines();
 
+    // Redraw on resize
+    const handleResize = () => {
+      resizeCanvas();
+      drawAbstractLines();
+    };
+    
+    window.addEventListener('resize', handleResize);
+    
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
