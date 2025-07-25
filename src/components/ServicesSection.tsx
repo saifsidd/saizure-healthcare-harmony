@@ -9,6 +9,7 @@ export function ServicesSection() {
       subtitle: "24/7 Availability",
       features: [
         "Answers patient calls instantly, around the clock",
+        "Indistinguishable from a human voice",
         "Schedules and confirms appointments",
         "Speaks multiple languages",
         "Handles FAQs and patient triage"
