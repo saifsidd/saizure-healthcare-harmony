@@ -22,32 +22,56 @@ export function HeroSection() {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Animated particles
-    const particles: Array<{x: number, y: number, vx: number, vy: number, opacity: number}> = [];
+    // Professional geometric patterns
+    const nodes: Array<{x: number, y: number, vx: number, vy: number}> = [];
+    const connections: Array<{from: number, to: number, opacity: number}> = [];
     
-    for (let i = 0; i < 50; i++) {
-      particles.push({
+    for (let i = 0; i < 25; i++) {
+      nodes.push({
         x: Math.random() * canvas.offsetWidth,
         y: Math.random() * canvas.offsetHeight,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        opacity: Math.random() * 0.5 + 0.1
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3
       });
     }
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
       
-      particles.forEach(particle => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
+      // Update node positions
+      nodes.forEach(node => {
+        node.x += node.vx;
+        node.y += node.vy;
         
-        if (particle.x < 0 || particle.x > canvas.offsetWidth) particle.vx *= -1;
-        if (particle.y < 0 || particle.y > canvas.offsetHeight) particle.vy *= -1;
-        
+        if (node.x < 0 || node.x > canvas.offsetWidth) node.vx *= -1;
+        if (node.y < 0 || node.y > canvas.offsetHeight) node.vy *= -1;
+      });
+
+      // Draw connections between nearby nodes
+      connections.length = 0;
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          
+          if (distance < 120) {
+            const opacity = (120 - distance) / 120 * 0.15;
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+      
+      // Draw nodes
+      nodes.forEach(node => {
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, 1, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(59, 130, 246, ${particle.opacity})`;
+        ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(59, 130, 246, 0.4)';
         ctx.fill();
       });
       
@@ -86,19 +110,10 @@ export function HeroSection() {
               Supercharge Your Practice With AI Automation
             </h1>
             
-            <p className="text-subheadline mb-6 max-w-3xl mx-auto">
-              Priva Flow builds HIPAA-compliant voice agents that sound just like real humans 
-              and backend automations so you can focus on patient care.
+            <p className="text-subheadline mb-12 max-w-2xl mx-auto">
+              Professional HIPAA-compliant AI voice agents and backend automation solutions 
+              designed to enhance patient care and streamline operations.
             </p>
-
-            {/* Emphasis on human-like AI */}
-            <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-6 mb-8 border border-primary/20">
-              <p className="text-lg font-semibold text-primary mb-2">🎯 Indistinguishable from Human Staff</p>
-              <p className="text-muted-foreground">
-                Our AI voice agents are so natural, patients and companies cannot tell they're speaking to AI. 
-                Experience seamless conversations that maintain the human touch your practice is known for.
-              </p>
-            </div>
 
             {/* Key benefits */}
             <div className="flex flex-wrap justify-center gap-6 mb-8">
