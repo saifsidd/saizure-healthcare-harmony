@@ -1,5 +1,5 @@
 import { DarkModeToggle } from "./DarkModeToggle";
-import { Shield, Linkedin, Mail } from "lucide-react";
+import { Shield, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -72,15 +72,6 @@ export function Footer() {
               >
                 <Mail className="h-4 w-4" />
                 <span>info@privaflow.com</span>
-              </a>
-              <a 
-                href="https://linkedin.com/company/priva-flow"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Linkedin className="h-4 w-4" />
-                <span>LinkedIn</span>
               </a>
             </div>
             

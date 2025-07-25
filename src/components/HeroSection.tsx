@@ -46,8 +46,8 @@ export function HeroSection() {
         ctx.beginPath();
         ctx.moveTo(line.x1, line.y1);
         ctx.lineTo(line.x2, line.y2);
-        ctx.strokeStyle = `hsl(214, 95%, 55%, ${0.15 + (index % 3) * 0.05})`;
-        ctx.lineWidth = 1.5;
+        ctx.strokeStyle = `hsl(214, 95%, 55%, ${0.4 + (index % 3) * 0.15})`;
+        ctx.lineWidth = 3;
         ctx.stroke();
       });
     };
@@ -80,7 +80,7 @@ export function HeroSection() {
         <div className="max-w-4xl mx-auto">
           {/* Content */}
           <div className="animate-fade-in-up">
-            <div className="flex items-center justify-center space-x-2 mb-6">
+            <div className="items-center justify-center space-x-2 mb-6 hidden sm:flex">
               <Shield className="h-5 w-5 text-primary" />
               <span className="text-primary font-semibold text-sm uppercase tracking-wide">
                 HIPAA Compliant Healthcare Automation

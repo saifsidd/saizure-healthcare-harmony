@@ -25,18 +25,18 @@ export function CTASection() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
             <div className="flex items-center space-x-3 text-primary-foreground/90">
               <Phone className="h-5 w-5" />
-              <span>Free 15-minute consultation</span>
+              <span>Free 30-minute consultation</span>
             </div>
             <div className="flex items-center space-x-3 text-primary-foreground/90">
               <Calendar className="h-5 w-5" />
-              <span>Implementation in 24-48 hours</span>
+              <span>Implementation under one week</span>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-4 shadow-lg"
-              onClick={() => window.open("https://calendly.com/priva-flow", "_blank")}
+              onClick={() => window.open("https://calendly.com/privaflow/30min", "_blank")}
             >
               Book Your Free Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
