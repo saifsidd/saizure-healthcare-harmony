@@ -26,7 +26,7 @@ export function HeroSection() {
     const nodes: Array<{x: number, y: number, vx: number, vy: number}> = [];
     const connections: Array<{from: number, to: number, opacity: number}> = [];
     
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 45; i++) {
       nodes.push({
         x: Math.random() * canvas.offsetWidth,
         y: Math.random() * canvas.offsetHeight,
