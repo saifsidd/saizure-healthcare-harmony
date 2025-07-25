@@ -1,3 +1,4 @@
+
 import { Quote, Star } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -40,7 +41,7 @@ export function TestimonialsSection() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
+    }, 7000);
 
     return () => clearInterval(timer);
   }, [testimonials.length]);
@@ -60,11 +61,11 @@ export function TestimonialsSection() {
             <div className="card-healthcare text-center relative overflow-hidden">
               <Quote className="h-12 w-12 text-primary/20 mx-auto mb-6" />
               
-              <div className="relative h-48 flex items-center">
+              <div className="relative min-h-[300px] sm:min-h-[250px] md:min-h-[200px] flex items-center">
                 {testimonials.map((testimonial, index) => (
                   <div
                     key={index}
-                    className={`absolute inset-0 transition-all duration-500 ${
+                    className={`absolute inset-0 transition-all duration-500 flex flex-col justify-center ${
                       index === currentTestimonial 
                         ? 'opacity-100 transform translate-x-0' 
                         : index < currentTestimonial 
@@ -72,7 +73,7 @@ export function TestimonialsSection() {
                           : 'opacity-0 transform translate-x-full'
                     }`}
                   >
-                    <blockquote className="text-lg md:text-xl text-foreground mb-6 leading-relaxed">
+                    <blockquote className="text-base sm:text-lg md:text-xl text-foreground mb-6 leading-relaxed px-2">
                       "{testimonial.quote}"
                     </blockquote>
                     
@@ -101,7 +102,7 @@ export function TestimonialsSection() {
               </div>
 
               {/* Testimonial indicators */}
-              <div className="flex justify-center space-x-2 mt-6 sm:mt-8">
+              <div className="flex justify-center space-x-2 mt-4 sm:mt-6">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
