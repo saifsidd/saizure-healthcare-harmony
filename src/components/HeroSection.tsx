@@ -91,7 +91,7 @@ export function HeroSection() {
       {/* Dynamic Background - Blue theme */}
       <canvas 
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-60"
+        className="absolute inset-0 w-full h-full opacity-60 blur-sm sm:blur-none"
         style={{ background: 'linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%)' }}
       />
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
