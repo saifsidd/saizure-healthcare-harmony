@@ -9,7 +9,7 @@ export function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img 
-                src="/lovable-uploads/1456e0d4-40b2-4dbc-9b20-bbbb64e91fb3.png" 
+                src="/lovable-uploads/c0722047-15ed-4240-9c68-ed38c407a300.png" 
                 alt="Priva Flow Logo" 
                 className="w-8 h-8"
               />
