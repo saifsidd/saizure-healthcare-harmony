@@ -1,4 +1,5 @@
-import { Shield, Mail } from "lucide-react";
+import { DarkModeToggle } from "./DarkModeToggle";
+import { Shield, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -72,15 +73,28 @@ export function Footer() {
                 <Mail className="h-4 w-4" />
                 <span>info@privaflow.com</span>
               </a>
+              <a 
+                href="https://linkedin.com/company/priva-flow"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+              >
+                <Linkedin className="h-4 w-4" />
+                <span>LinkedIn</span>
+              </a>
             </div>
             
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-muted-foreground">Theme</span>
+              <DarkModeToggle />
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Priva Flow. All rights reserved.
+            © 2025 Priva Flow. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground mt-2 md:mt-0">
             HIPAA Compliant Healthcare Automation Solutions
