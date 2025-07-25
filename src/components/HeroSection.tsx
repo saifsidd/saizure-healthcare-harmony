@@ -22,12 +22,11 @@ export function HeroSection() {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Professional geometric patterns with more frequency and visibility
+    // Professional geometric patterns
     const nodes: Array<{x: number, y: number, vx: number, vy: number}> = [];
     const connections: Array<{from: number, to: number, opacity: number}> = [];
     
-    // Increased number of nodes for more frequency
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < 25; i++) {
       nodes.push({
         x: Math.random() * canvas.offsetWidth,
         y: Math.random() * canvas.offsetHeight,
@@ -56,23 +55,23 @@ export function HeroSection() {
           const dy = nodes[i].y - nodes[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           
-          if (distance < 150) {
-            const opacity = (150 - distance) / 150 * 0.7;
+          if (distance < 120) {
+            const opacity = (120 - distance) / 120 * 0.15;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
             ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
-            ctx.lineWidth = 2;
+            ctx.lineWidth = 1;
             ctx.stroke();
           }
         }
       }
       
-      // Draw nodes - more pronounced
+      // Draw nodes
       nodes.forEach(node => {
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 3, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(59, 130, 246, 0.8)';
+        ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(59, 130, 246, 0.4)';
         ctx.fill();
       });
       
@@ -88,36 +87,32 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative pt-16 pb-24 overflow-hidden min-h-screen flex items-center">
-      {/* Dynamic Background - Blue theme */}
+      {/* Dynamic Background */}
       <canvas 
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-60 blur-sm sm:blur-none"
-        style={{ background: 'linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%)' }}
+        className="absolute inset-0 w-full h-full opacity-30"
+        style={{ background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)' }}
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
         <div className="max-w-4xl mx-auto">
           {/* Content */}
           <div className="animate-fade-in-up">
-            <div className="items-center justify-center space-x-2 mb-6 hidden md:flex">
+            <div className="flex items-center justify-center space-x-2 mb-6">
               <Shield className="h-5 w-5 text-primary" />
               <span className="text-primary font-semibold text-sm uppercase tracking-wide">
                 HIPAA Compliant Healthcare Automation
               </span>
             </div>
             
-            <h1 className="text-headline bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent mb-6 leading-tight">
-              Supercharge Your Practice
+            <h1 className="text-headline bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent mb-6">
+              Supercharge Your Practice With AI Automation
             </h1>
             
-            <p className="text-subheadline mb-12 max-w-2xl mx-auto hidden sm:block">
+            <p className="text-subheadline mb-12 max-w-2xl mx-auto">
               Professional HIPAA-compliant AI voice agents and backend automation solutions 
               designed to enhance patient care and streamline operations.
-            </p>
-
-            <p className="text-subheadline mb-12 max-w-2xl mx-auto block sm:hidden">
-              Automating Healthcare, One Workflow at a Time
             </p>
 
             {/* Key benefits */}
@@ -139,9 +134,9 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 className="btn-primary text-lg px-8 py-4"
-                onClick={() => window.open("https://calendly.com/privaflow/30min", "_blank")}
+                onClick={() => window.open("https://calendly.com/priva-flow", "_blank")}
               >
-                See a Demo
+                Book a Call
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button 
@@ -153,9 +148,9 @@ export function HeroSection() {
               </Button>
             </div>
 
-            {/* Tagline - hidden on mobile */}
-            <p className="text-sm text-muted-foreground mt-6 italic hidden sm:block">
-              "Automating Healthcare, One Workflow at a Time"
+            {/* Tagline */}
+            <p className="text-sm text-muted-foreground mt-6 italic">
+              "Reducing Burnout, One Workflow at a Time"
             </p>
           </div>
         </div>
