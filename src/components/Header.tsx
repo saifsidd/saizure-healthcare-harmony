@@ -24,12 +24,14 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary-dark rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">P</span>
-              </div>
-              <span className="text-xl font-bold text-foreground">Priva Flow</span>
-            </div>
+          <div className="flex items-center space-x-2">
+            <img 
+              src="/lovable-uploads/1080baff-ea94-4dc3-bedc-3f43ab1f8a6e.png" 
+              alt="Priva Flow Logo" 
+              className="w-8 h-8"
+            />
+            <span className="text-xl font-bold text-foreground">Priva Flow</span>
+          </div>
           </div>
 
           {/* Desktop Navigation */}

@@ -8,9 +8,11 @@ export function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary-dark rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">P</span>
-              </div>
+              <img 
+                src="/lovable-uploads/1080baff-ea94-4dc3-bedc-3f43ab1f8a6e.png" 
+                alt="Priva Flow Logo" 
+                className="w-8 h-8"
+              />
               <span className="text-xl font-bold text-foreground">Priva Flow</span>
             </div>
             <p className="text-muted-foreground mb-4 leading-relaxed">
