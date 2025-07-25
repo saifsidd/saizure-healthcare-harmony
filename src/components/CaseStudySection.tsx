@@ -25,7 +25,7 @@ export function CaseStudySection() {
             </h2>
             
             <p className="text-subheadline mb-8">
-              Family Health Partners was struggling with missed calls, long patient wait times, 
+              This clinic in Detroit was struggling with missed calls, long patient wait times, 
               and overwhelmed staff. Our AI voice receptionist solution transformed their practice 
               in just 7 days.
             </p>
@@ -81,8 +81,8 @@ export function CaseStudySection() {
                 providing exceptional care instead of juggling phone calls all day."
               </blockquote>
               <div className="text-center mt-3">
-                <div className="font-semibold text-foreground text-sm">Dr. Michael Thompson</div>
-                <div className="text-xs text-muted-foreground">Family Health Partners, Detroit</div>
+                <div className="font-semibold text-foreground text-sm">Chief Doctor</div>
+                <div className="text-xs text-muted-foreground">Detroit, Michigan</div>
               </div>
             </div>
           </div>
