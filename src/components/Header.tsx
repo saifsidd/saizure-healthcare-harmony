@@ -30,7 +30,7 @@ export function Header() {
               alt="PrivaFlows Logo" 
               className="w-8 h-8"
             />
-            <span className="text-xl font-bold text-foreground">PrivaFlows</span>
+            <span className="text-xl font-bold text-primary">PrivaFlows</span>
           </div>
           </div>
 
