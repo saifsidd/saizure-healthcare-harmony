@@ -22,56 +22,34 @@ export function HeroSection() {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Professional geometric patterns
-    const nodes: Array<{x: number, y: number, vx: number, vy: number}> = [];
-    const connections: Array<{from: number, to: number, opacity: number}> = [];
+    // Subtle floating dots
+    const dots: Array<{x: number, y: number, vx: number, vy: number, size: number, opacity: number}> = [];
     
-    for (let i = 0; i < 25; i++) {
-      nodes.push({
+    for (let i = 0; i < 20; i++) {
+      dots.push({
         x: Math.random() * canvas.offsetWidth,
         y: Math.random() * canvas.offsetHeight,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3
+        vx: (Math.random() - 0.5) * 0.2,
+        vy: (Math.random() - 0.5) * 0.2,
+        size: Math.random() * 1.5 + 0.5,
+        opacity: Math.random() * 0.3 + 0.1
       });
     }
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.offsetWidth, canvas.offsetHeight);
       
-      // Update node positions
-      nodes.forEach(node => {
-        node.x += node.vx;
-        node.y += node.vy;
+      // Update dots
+      dots.forEach(dot => {
+        dot.x += dot.vx;
+        dot.y += dot.vy;
         
-        if (node.x < 0 || node.x > canvas.offsetWidth) node.vx *= -1;
-        if (node.y < 0 || node.y > canvas.offsetHeight) node.vy *= -1;
-      });
-
-      // Draw connections between nearby nodes
-      connections.length = 0;
-      for (let i = 0; i < nodes.length; i++) {
-        for (let j = i + 1; j < nodes.length; j++) {
-          const dx = nodes[i].x - nodes[j].x;
-          const dy = nodes[i].y - nodes[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          
-          if (distance < 120) {
-            const opacity = (120 - distance) / 120 * 0.15;
-            ctx.beginPath();
-            ctx.moveTo(nodes[i].x, nodes[i].y);
-            ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
-            ctx.lineWidth = 1;
-            ctx.stroke();
-          }
-        }
-      }
-      
-      // Draw nodes
-      nodes.forEach(node => {
+        if (dot.x < 0 || dot.x > canvas.offsetWidth) dot.vx *= -1;
+        if (dot.y < 0 || dot.y > canvas.offsetHeight) dot.vy *= -1;
+        
         ctx.beginPath();
-        ctx.arc(node.x, node.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(59, 130, 246, 0.4)';
+        ctx.arc(dot.x, dot.y, dot.size, 0, Math.PI * 2);
+        ctx.fillStyle = `hsl(214, 95%, 55%, ${dot.opacity})`;
         ctx.fill();
       });
       
@@ -87,13 +65,12 @@ export function HeroSection() {
 
   return (
     <section id="home" className="relative pt-16 pb-24 overflow-hidden min-h-screen flex items-center">
-      {/* Dynamic Background */}
+      {/* Clean Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/20" />
       <canvas 
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-30"
-        style={{ background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)' }}
+        className="absolute inset-0 w-full h-full opacity-40 dark:opacity-20"
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
         <div className="max-w-4xl mx-auto">
@@ -134,17 +111,17 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
                 className="btn-primary text-lg px-8 py-4"
-                onClick={() => window.open("https://calendly.com/priva-flow", "_blank")}
+                onClick={() => window.open("https://calendly.com/privaflow/30min", "_blank")}
               >
-                Book a Call
+                See a Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button 
                 variant="outline"
                 className="btn-secondary text-lg px-8 py-4"
-                onClick={() => document.querySelector("#services")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => window.open("https://calendly.com/privaflow/30min", "_blank")}
               >
-                Learn More
+                Contact Sales
               </Button>
             </div>
 
