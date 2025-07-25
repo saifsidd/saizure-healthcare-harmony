@@ -26,7 +26,7 @@ export function Header() {
           <div className="flex-shrink-0">
           <div className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/1080baff-ea94-4dc3-bedc-3f43ab1f8a6e.png" 
+              src="/lovable-uploads/1456e0d4-40b2-4dbc-9b20-bbbb64e91fb3.png" 
               alt="Priva Flow Logo" 
               className="w-8 h-8"
             />
