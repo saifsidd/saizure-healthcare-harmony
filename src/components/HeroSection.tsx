@@ -69,7 +69,7 @@ export function HeroSection() {
 
           {/* Hero Image */}
           <div className="animate-slide-in-right">
-            <div className="relative">
+            <div className="relative mx-auto max-w-lg lg:max-w-none">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-3xl transform rotate-6" />
               <img
                 src={heroImage}
@@ -78,14 +78,14 @@ export function HeroSection() {
               />
               
               {/* Floating stats */}
-              <div className="absolute -bottom-6 -left-6 bg-card border border-border rounded-2xl p-4 shadow-lg">
-                <div className="text-2xl font-bold text-primary">99.9%</div>
-                <div className="text-sm text-muted-foreground">Uptime</div>
+              <div className="absolute -bottom-3 -left-3 sm:-bottom-6 sm:-left-6 bg-card border border-border rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg">
+                <div className="text-xl sm:text-2xl font-bold text-primary">99.9%</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Uptime</div>
               </div>
               
-              <div className="absolute -top-6 -right-6 bg-card border border-border rounded-2xl p-4 shadow-lg">
-                <div className="text-2xl font-bold text-primary">24/7</div>
-                <div className="text-sm text-muted-foreground">Available</div>
+              <div className="absolute -top-3 -right-3 sm:-top-6 sm:-right-6 bg-card border border-border rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg">
+                <div className="text-xl sm:text-2xl font-bold text-primary">24/7</div>
+                <div className="text-xs sm:text-sm text-muted-foreground">Available</div>
               </div>
             </div>
           </div>
