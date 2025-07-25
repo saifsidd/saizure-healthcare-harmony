@@ -27,7 +27,7 @@ export function CaseStudySection() {
             <p className="text-subheadline mb-8">
               Family Health Partners was struggling with missed calls, long patient wait times, 
               and overwhelmed staff. Our AI voice receptionist solution transformed their practice 
-              in just 30 days.
+              in just 7 days.
             </p>
 
             <div className="space-y-4 mb-8">
