@@ -27,10 +27,10 @@ export function Header() {
           <div className="flex items-center space-x-2">
             <img 
               src="/lovable-uploads/c0722047-15ed-4240-9c68-ed38c407a300.png" 
-              alt="Priva Flow Logo" 
+              alt="PrivaFlows Logo" 
               className="w-8 h-8"
             />
-            <span className="text-xl font-bold text-foreground">Priva Flow</span>
+            <span className="text-xl font-bold text-foreground">PrivaFlows</span>
           </div>
           </div>
 

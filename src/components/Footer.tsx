@@ -10,10 +10,10 @@ export function Footer() {
             <div className="flex items-center space-x-2 mb-4">
               <img 
                 src="/lovable-uploads/c0722047-15ed-4240-9c68-ed38c407a300.png" 
-                alt="Priva Flow Logo" 
+                alt="PrivaFlows Logo" 
                 className="w-8 h-8"
               />
-              <span className="text-xl font-bold text-foreground">Priva Flow</span>
+              <span className="text-xl font-bold text-foreground">PrivaFlows</span>
             </div>
             <p className="text-muted-foreground mb-4 leading-relaxed">
               Transforming healthcare practices with HIPAA-compliant automation solutions featuring human-like AI voice agents that enhance patient care and operational efficiency.
@@ -90,7 +90,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 Priva Flow. All rights reserved.
+            © 2025 PrivaFlows. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground mt-2 md:mt-0">
             HIPAA Compliant Healthcare Automation Solutions
