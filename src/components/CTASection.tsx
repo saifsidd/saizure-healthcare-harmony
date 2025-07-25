@@ -44,7 +44,7 @@ export function CTASection() {
             
             <Button 
               variant="outline" 
-              className="border-white/30 text-primary-foreground hover:bg-white/10 text-lg px-8 py-4"
+              className="border-white/50 bg-white/10 text-primary-foreground hover:bg-white/20 hover:border-white/70 text-lg px-8 py-4 backdrop-blur-sm"
               onClick={() => window.open("mailto:info@saizuresolutions.com", "_blank")}
             >
               Contact Sales
