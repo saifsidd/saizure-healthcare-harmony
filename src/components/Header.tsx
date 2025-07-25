@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { DarkModeToggle } from "./DarkModeToggle";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
@@ -46,9 +45,8 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Desktop CTA and Dark Mode */}
+          {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <DarkModeToggle />
             <Button 
               className="btn-primary"
               onClick={() => window.open("https://calendly.com/priva-flow", "_blank")}
@@ -59,7 +57,6 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
-            <DarkModeToggle />
             <Button
               variant="ghost"
               size="sm"

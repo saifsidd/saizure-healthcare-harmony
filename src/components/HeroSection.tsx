@@ -111,9 +111,13 @@ export function HeroSection() {
               Supercharge Your Practice
             </h1>
             
-            <p className="text-subheadline mb-12 max-w-2xl mx-auto">
+            <p className="text-subheadline mb-12 max-w-2xl mx-auto hidden sm:block">
               Professional HIPAA-compliant AI voice agents and backend automation solutions 
               designed to enhance patient care and streamline operations.
+            </p>
+
+            <p className="text-subheadline mb-12 max-w-2xl mx-auto block sm:hidden">
+              Automating Healthcare, One Workflow at a Time
             </p>
 
             {/* Key benefits */}
@@ -149,8 +153,8 @@ export function HeroSection() {
               </Button>
             </div>
 
-            {/* Tagline */}
-            <p className="text-sm text-muted-foreground mt-6 italic">
+            {/* Tagline - hidden on mobile */}
+            <p className="text-sm text-muted-foreground mt-6 italic hidden sm:block">
               "Automating Healthcare, One Workflow at a Time"
             </p>
           </div>
