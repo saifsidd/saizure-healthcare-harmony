@@ -27,9 +27,9 @@ export function Header() {
           <div className="flex-shrink-0">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary-dark rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">S</span>
+                <span className="text-primary-foreground font-bold text-sm">P</span>
               </div>
-              <span className="text-xl font-bold text-foreground">Saizure Solutions</span>
+              <span className="text-xl font-bold text-foreground">Priva Flow</span>
             </div>
           </div>
 
@@ -51,7 +51,7 @@ export function Header() {
             <DarkModeToggle />
             <Button 
               className="btn-primary"
-              onClick={() => window.open("https://calendly.com/saizure-solutions", "_blank")}
+              onClick={() => window.open("https://calendly.com/priva-flow", "_blank")}
             >
               Book a Call
             </Button>
@@ -86,7 +86,7 @@ export function Header() {
               ))}
               <Button 
                 className="btn-primary w-full mt-4"
-                onClick={() => window.open("https://calendly.com/saizure-solutions", "_blank")}
+                onClick={() => window.open("https://calendly.com/priva-flow", "_blank")}
               >
                 Book a Call
               </Button>

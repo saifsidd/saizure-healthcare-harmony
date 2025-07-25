@@ -10,13 +10,12 @@ export function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-primary to-primary-dark rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">S</span>
+                <span className="text-primary-foreground font-bold text-sm">P</span>
               </div>
-              <span className="text-xl font-bold text-foreground">Saizure Solutions</span>
+              <span className="text-xl font-bold text-foreground">Priva Flow</span>
             </div>
             <p className="text-muted-foreground mb-4 leading-relaxed">
-              Automating Healthcare, One Workflow at a Time. 
-              HIPAA-compliant AI solutions for modern medical practices.
+              Transforming healthcare practices with HIPAA-compliant automation solutions featuring human-like AI voice agents that enhance patient care and operational efficiency.
             </p>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Shield className="h-4 w-4 text-primary" />
@@ -54,7 +53,7 @@ export function Footer() {
               </li>
               <li>
                 <a 
-                  href="mailto:info@saizuresolutions.com"
+                  href="mailto:info@privaflow.com"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Contact
@@ -68,14 +67,14 @@ export function Footer() {
             <h3 className="font-semibold text-foreground mb-4">Get in Touch</h3>
             <div className="space-y-3 mb-6">
               <a 
-                href="mailto:info@saizuresolutions.com"
+                href="mailto:info@privaflow.com"
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="h-4 w-4" />
-                <span>info@saizuresolutions.com</span>
+                <span>info@privaflow.com</span>
               </a>
               <a 
-                href="https://linkedin.com/company/saizure-solutions"
+                href="https://linkedin.com/company/priva-flow"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
@@ -95,7 +94,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Saizure Solutions. All rights reserved.
+            © 2024 Priva Flow. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground mt-2 md:mt-0">
             HIPAA Compliant Healthcare Automation Solutions

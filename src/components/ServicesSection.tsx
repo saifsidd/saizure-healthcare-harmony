@@ -96,7 +96,7 @@ export function ServicesSection() {
               <Button 
                 variant="outline" 
                 className="w-full btn-secondary group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-                onClick={() => window.open("https://calendly.com/saizure-solutions", "_blank")}
+                onClick={() => window.open("https://calendly.com/priva-flow", "_blank")}
               >
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -109,7 +109,7 @@ export function ServicesSection() {
         <div className="text-center mt-16">
           <Button 
             className="btn-primary text-lg px-8 py-4"
-            onClick={() => window.open("https://calendly.com/saizure-solutions", "_blank")}
+            onClick={() => window.open("https://calendly.com/priva-flow", "_blank")}
           >
             Get Started Today
             <ArrowRight className="ml-2 h-5 w-5" />

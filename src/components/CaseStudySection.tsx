@@ -41,7 +41,7 @@ export function CaseStudySection() {
 
             <Button 
               className="btn-primary"
-              onClick={() => window.open("https://calendly.com/saizure-solutions", "_blank")}
+              onClick={() => window.open("https://calendly.com/priva-flow", "_blank")}
             >
               Get Similar Results
               <ArrowRight className="ml-2 h-5 w-5" />

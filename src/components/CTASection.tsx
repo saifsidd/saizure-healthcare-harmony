@@ -36,7 +36,7 @@ export function CTASection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-4 shadow-lg"
-              onClick={() => window.open("https://calendly.com/saizure-solutions", "_blank")}
+              onClick={() => window.open("https://calendly.com/priva-flow", "_blank")}
             >
               Book Your Free Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -45,7 +45,7 @@ export function CTASection() {
             <Button 
               variant="outline" 
               className="border-white/50 bg-white/10 text-primary-foreground hover:bg-white/20 hover:border-white/70 text-lg px-8 py-4 backdrop-blur-sm"
-              onClick={() => window.open("mailto:info@saizuresolutions.com", "_blank")}
+              onClick={() => window.open("mailto:info@privaflow.com", "_blank")}
             >
               Contact Sales
             </Button>
