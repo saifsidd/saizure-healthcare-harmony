@@ -1,3 +1,4 @@
+import { DarkModeToggle } from "./DarkModeToggle";
 import { Shield, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
@@ -81,6 +82,11 @@ export function Footer() {
                 <Linkedin className="h-4 w-4" />
                 <span>LinkedIn</span>
               </a>
+            </div>
+            
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-muted-foreground">Theme</span>
+              <DarkModeToggle />
             </div>
           </div>
         </div>
