@@ -101,12 +101,12 @@ export function TestimonialsSection() {
               </div>
 
               {/* Testimonial indicators */}
-              <div className="flex justify-center space-x-3 mt-8 sm:mt-10">
+              <div className="flex justify-center space-x-2 mt-6 sm:mt-8">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
-                    className={`w-4 h-4 rounded-full transition-all duration-300 transform ${
+                    className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 transform ${
                       index === currentTestimonial 
                         ? 'bg-primary scale-110 shadow-lg' 
                         : 'bg-muted-foreground/30 hover:bg-muted-foreground/50 hover:scale-105'
