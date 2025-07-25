@@ -101,7 +101,7 @@ export function TestimonialsSection() {
               </div>
 
               {/* Testimonial indicators */}
-              <div className="flex justify-center space-x-2 mt-6">
+              <div className="flex justify-center space-x-2 mt-8 sm:mt-10">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
