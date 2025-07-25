@@ -90,7 +90,7 @@ export function HeroSection() {
       {/* Dynamic Background */}
       <canvas 
         ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-30"
+        className="absolute inset-0 w-full h-full opacity-60"
         style={{ background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)' }}
       />
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
